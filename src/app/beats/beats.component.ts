@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AddBeatComponent } from '../add-beat/add-beat.component';
 import { AddButtonComponent } from '../add-button/add-button.component';
 import { Beat } from '../beat';
 import { BeatsItemsComponent } from '../beats-items/beats-items.component';
@@ -12,7 +13,7 @@ import { UiService } from '../services/ui.service';
 @Component({
   selector: 'app-beats',
   standalone: true,
-  imports: [BeatsItemsComponent, NgFor, AddButtonComponent],
+  imports: [BeatsItemsComponent, NgFor, AddButtonComponent, AddBeatComponent],
   templateUrl: './beats.component.html',
   styleUrl: './beats.component.css',
 })

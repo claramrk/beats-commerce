@@ -2,6 +2,7 @@
 <app-add-button
   color="#3498db"
   color="{{ showAddBeat ? 'red' : 'green' }}"
-  label="{{ showAddBeat ? 'Schließen' : 'Hinzufügen' }}"
+  label="{{ showAddBeat ? 'close' : 'add track' }}"
   (btnClick)="toggleAddBeat()"
 ></app-add-button>
+<app-add-beat></app-add-beat>

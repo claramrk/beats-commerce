@@ -1,26 +1,15 @@
 <form *ngIf="showAddBeat" class="add-form" (ngSubmit)="onSubmit()">
+  <h2>Add a new track</h2>
   <div class="form-control">
-    <label for="title">Aufgabe</label>
-    <input
-      type="text"
-      name="title"
-      [(ngModel)]="title"
-      id="title"
-      placeholder="Füge eine neue Aufgabe hinzu"
-    />
+    <label for="title">Title</label>
+    <input type="text" name="title" [(ngModel)]="title" id="title" />
   </div>
   <div class="form-control">
-    <label for="day">Tag und Uhrzeit</label>
-    <input
-      type="text"
-      name="day"
-      [(ngModel)]="day"
-      id="day"
-      placeholder="Füge Tag und Uhrzeit hinzu"
-    />
+    <label for="file">File link</label>
+    <input type="text" name="file" [(ngModel)]="file" id="file" />
   </div>
   <div class="form-control">
-    <label for="coverImage">Erinnerung einstellen</label>
+    <label for="coverImage">Cover image path:</label>
     <input
       type="text"
       name="coverImage"
@@ -29,8 +18,8 @@
     />
   </div>
   <div class="form-control">
-    <label for="price">Preis</label>
+    <label for="price">Price:</label>
     <input type="number" name="price" [(ngModel)]="price" id="price" />
   </div>
-  <input type="submit" value="Aufgabe speichern" class="btn btn-block" />
+  <input type="submit" value="Add track" class="btn btn-block" />
 </form>

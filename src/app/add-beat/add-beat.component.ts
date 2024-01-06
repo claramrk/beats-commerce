@@ -2,13 +2,14 @@ import { NgIf } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { AddButtonComponent } from '../add-button/add-button.component';
 import { Beat } from '../beat';
 import { UiService } from '../services/ui.service';
 
 @Component({
   selector: 'app-add-beat',
   standalone: true,
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule, NgIf, AddButtonComponent],
   templateUrl: './add-beat.component.html',
   styleUrl: './add-beat.component.css',
 })
@@ -26,7 +27,7 @@ export class AddBeatComponent implements OnInit {
 
   showAddForm: boolean = false;
   title!: string;
-  day!: string;
+  file!: string;
   coverImage!: string;
   price!: number;
 
@@ -41,7 +42,7 @@ export class AddBeatComponent implements OnInit {
     const newBeat: Beat = {
       id: 100, // Set the ID accordingly
       title: this.title,
-      file: this.day,
+      file: this.file,
       cover: this.coverImage,
       price: this.price,
     };
