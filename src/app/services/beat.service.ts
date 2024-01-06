@@ -20,4 +20,8 @@ export class BeatService {
   getBeats(): Observable<Beat[]> {
     return this.http.get<Beat[]>(this.apiBaseUrl);
   }
+
+  addBeat(beat: Beat): Observable<Beat> {
+    return this.http.post<Beat>(this.apiBaseUrl, beat, httpOptions);
+  }
 }

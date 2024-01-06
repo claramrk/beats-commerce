@@ -1,1 +1,7 @@
 <app-beats-items *ngFor="let beat of beats" [beat]="beat"></app-beats-items>
+<app-add-button
+  color="#3498db"
+  color="{{ showAddBeat ? 'red' : 'green' }}"
+  label="{{ showAddBeat ? 'Schließen' : 'Hinzufügen' }}"
+  (btnClick)="toggleAddBeat()"
+></app-add-button>

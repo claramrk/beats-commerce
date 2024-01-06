@@ -1,0 +1,36 @@
+<form *ngIf="showAddBeat" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="title">Aufgabe</label>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="title"
+      id="title"
+      placeholder="Füge eine neue Aufgabe hinzu"
+    />
+  </div>
+  <div class="form-control">
+    <label for="day">Tag und Uhrzeit</label>
+    <input
+      type="text"
+      name="day"
+      [(ngModel)]="day"
+      id="day"
+      placeholder="Füge Tag und Uhrzeit hinzu"
+    />
+  </div>
+  <div class="form-control">
+    <label for="coverImage">Erinnerung einstellen</label>
+    <input
+      type="text"
+      name="coverImage"
+      [(ngModel)]="coverImage"
+      id="coverImage"
+    />
+  </div>
+  <div class="form-control">
+    <label for="price">Preis</label>
+    <input type="number" name="price" [(ngModel)]="price" id="price" />
+  </div>
+  <input type="submit" value="Aufgabe speichern" class="btn btn-block" />
+</form>
