@@ -4,14 +4,14 @@
       "id": 1,
       "title": "MockBeat 1",
       "file": "TBA",
-      "cover": "/trackCover.png",
+      "cover": "/assets/trackCover.png",
       "price": 120.32
     },
     {
       "id": 2,
       "title": "MockBeat 2",
       "file": "TBA",
-      "cover": "/trackCover.png",
+      "cover": "/assets/trackCover.png",
       "price": 110.25
     }
   ]

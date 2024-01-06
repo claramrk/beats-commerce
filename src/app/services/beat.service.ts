@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class BeatService {
-  private apiBaseUrl = 'http://localhost:5000/tasks';
+  private apiBaseUrl = 'http://localhost:5000/beats';
 
   constructor(private http: HttpClient) {}
 

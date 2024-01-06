@@ -17,7 +17,7 @@ export class BeatsComponent implements OnInit {
   beats: Beat[] = [];
   subscription!: Subscription;
 
-  constructor(private http: HttpClient, private beatService: BeatService) {}
+  constructor(private beatService: BeatService) {}
   ngOnInit() {
     this.beatService.getBeats().subscribe((elem: Beat[]) => {
       this.beats = elem;
