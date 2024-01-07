@@ -22,20 +22,21 @@ export class BeatsComponent implements OnInit {
   subscription!: Subscription;
   showAddBeat: boolean = false;
 
+  ngOnInit() {
+    this.beatService.getBeats().subscribe((elem: Beat[]) => {
+      this.beats = elem;
+    });
+  }
+
   constructor(
     private beatService: BeatService,
     private uiService: UiService,
     private router: Router,
   ) {
-    this.beatService.getBeats().subscribe((elem: Beat[]) => {
-      this.beats = elem;
-    });
     this.subscription = this.uiService
       .onToggle()
       .subscribe((value) => (this.showAddBeat = value));
   }
-
-  ngOnInit() {}
 
   addBeat(beat: Beat) {
     this.beatService

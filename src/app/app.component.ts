@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Beat } from './beat';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { BeatsItemsComponent } from './beats-items/beats-items.component';
 import { BeatsComponent } from './beats/beats.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,6 +20,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

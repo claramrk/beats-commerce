@@ -47,7 +47,7 @@ export class AddBeatComponent implements OnInit {
     const newBeat: Beat = {
       id: this.generateRandomNumber(),
       title: this.title,
-      file: this.file,
+      file: 'TBA',
       cover: '/assets/trackCover.png',
       price: this.price,
     };

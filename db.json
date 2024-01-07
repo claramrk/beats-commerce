@@ -8,39 +8,11 @@
       "price": 110.25
     },
     {
-      "id": 1,
-      "title": "oqpoj",
-      "file": "iojqwoij",
-      "cover": "/assets/trackCover.png",
-      "price": 48
-    },
-    {
-      "id": 3,
-      "title": "qojiq",
-      "file": "ijioj",
-      "cover": "/assets/trackCover.png",
-      "price": 4
-    },
-    {
-      "id": 4,
-      "title": "qopqjop",
-      "file": "ioj2opj",
-      "cover": "/assets/trackCover.png",
-      "price": 50
-    },
-    {
-      "id": 5,
-      "title": "qijjq",
-      "file": "iojioj",
-      "cover": "/assets/trackCover.png",
-      "price": 4
-    },
-    {
       "id": 6,
-      "title": "qijjqliq",
-      "file": "iojioj1i3",
+      "title": "MockBeat 6",
+      "file": "TBA",
       "cover": "/assets/trackCover.png",
-      "price": 5
+      "price": 400
     }
   ]
 }
