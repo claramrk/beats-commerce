@@ -30,16 +30,16 @@
 </form> -->
 
 <form *ngIf="showAddBeat" class="add-form" (ngSubmit)="onSubmit()">
-  <div class="space-y-12">
-    <div class="border-b border-white/10 pb-12">
+  <div class="space-y-12 pt-4">
+    <div class="border-b border-white/10 pb-6">
       <h2 class="text-base font-semibold leading-7 text-white">Add Beat</h2>
       <p class="mt-1 text-sm leading-6 text-gray-400">
         This information will be displayed publicly so be careful what you
         share.
       </p>
     </div>
-    <div class="border-b border-white/10 pb-12">
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+    <div class="border-b border-white/10 pb-6">
+      <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
           <label
             for="title"

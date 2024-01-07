@@ -9,7 +9,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class AddButtonComponent {
   @Input() label: string = 'Button';
-  @Input() color: string = '#000';
   @Output() btnClick: EventEmitter<void> = new EventEmitter<void>();
 
   onClick(): void {
