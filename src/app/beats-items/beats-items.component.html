@@ -1,9 +1,30 @@
-<div class="beat">
-  <h3>
-    {{ beat.title }}
-  </h3>
-  <p>Listen to track: {{ beat.file }}</p>
-  <img [src]="beat.cover" alt="trackCover" height="100" />
-  <p>{{ beat.price }} €</p>
-  <button (click)="onDelete(beat)">delete</button>
+<div
+  class="beat relative flex flex-col rounded-lg border border-gray-200 bg-white"
+>
+  <div
+    class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none hover:opacity-75 sm:h-96"
+  >
+    <img
+      [src]="beat.cover"
+      alt="trackCover"
+      class="h-fit w-full object-center sm:h-full sm:w-full"
+    />
+  </div>
+  <div class="flex flex-1 flex-col space-y-2 p-4">
+    <h3 class="text-sm font-medium text-gray-900">
+      <span aria-hidden="true" class="absolute inset-0"></span>
+      {{ beat.title }}
+    </h3>
+    <p class="text-sm text-gray-500">Listen to track: {{ beat.file }}</p>
+    <div class="flex flex-1 flex-col justify-end">
+      <p class="text-sm italic text-gray-500">prod by s.</p>
+      <p class="text-base font-medium text-gray-900">{{ beat.price }} €</p>
+    </div>
+  </div>
 </div>
+<button
+  (click)="onDelete(beat)"
+  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+>
+  delete
+</button>
