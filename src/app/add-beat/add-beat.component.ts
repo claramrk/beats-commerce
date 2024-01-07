@@ -33,6 +33,11 @@ export class AddBeatComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  generateRandomNumber() {
+    const randomNumber = Math.floor(Math.random() * 1);
+    return randomNumber;
+  }
+
   onSubmit() {
     if (!this.title) {
       alert('Please add a beat');
@@ -40,7 +45,7 @@ export class AddBeatComponent implements OnInit {
     }
 
     const newBeat: Beat = {
-      id: Math.floor(Math.random() * (this.beatslength + 1)),
+      id: this.generateRandomNumber(),
       title: this.title,
       file: this.file,
       cover: '/assets/trackCover.png',
