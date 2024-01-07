@@ -5,4 +5,4 @@
   label="{{ showAddBeat ? 'close' : 'add track' }}"
   (btnClick)="toggleAddBeat()"
 ></app-add-button>
-<app-add-beat></app-add-beat>
+<app-add-beat (onAddBeat)="addBeat($event)"></app-add-beat>
