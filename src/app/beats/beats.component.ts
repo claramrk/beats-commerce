@@ -52,4 +52,15 @@ export class BeatsComponent implements OnInit {
   toggleAddBeat() {
     this.uiService.toggleAddBeat();
   }
+
+  deleteBeat(beat: Beat) {
+    // Diese Methode wird aufgerufen, wenn eine Aufgabe gelöscht werden soll
+    // Der beatService.deleteBeat() löscht die Aufgabe über eine HTTP-Anfrage
+    // Nach dem erfolgreichen Löschen wird die beats-Array aktualisiert, um die gelöschte Aufgabe zu entfernen
+    this.beatService
+      .deleteBeat(beat.id)
+      .subscribe(
+        () => (this.beats = this.beats.filter((b) => b.id !== beat.id)),
+      );
+  }
 }

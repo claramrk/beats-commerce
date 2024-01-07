@@ -24,4 +24,9 @@ export class BeatService {
   addBeat(beat: Beat): Observable<Beat> {
     return this.http.post<Beat>(this.apiBaseUrl, beat, httpOptions);
   }
+
+  deleteBeat(beatId: number): Observable<void> {
+    const url = `${this.apiBaseUrl}/${beatId}`;
+    return this.http.delete<void>(url);
+  }
 }

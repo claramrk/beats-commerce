@@ -1,8 +1,15 @@
-<app-beats-items *ngFor="let beat of beats" [beat]="beat"></app-beats-items>
+<app-beats-items
+  *ngFor="let beat of beats"
+  [beat]="beat"
+  (onDeleteBeat)="deleteBeat(beat)"
+></app-beats-items>
 <app-add-button
   color="#3498db"
   color="{{ showAddBeat ? 'red' : 'green' }}"
   label="{{ showAddBeat ? 'close' : 'add track' }}"
   (btnClick)="toggleAddBeat()"
 ></app-add-button>
-<app-add-beat (onAddBeat)="addBeat($event)"></app-add-beat>
+<app-add-beat
+  (onAddBeat)="addBeat($event)"
+  [beatslength]="beats.length"
+></app-add-beat>

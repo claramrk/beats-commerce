@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AddButtonComponent } from '../add-button/add-button.component';
@@ -16,6 +16,14 @@ import { UiService } from '../services/ui.service';
 export class AddBeatComponent implements OnInit {
   showAddBeat: boolean = false;
   subscription: Subscription;
+  showAddForm: boolean = false;
+  title!: string;
+  file!: string;
+  coverImage!: string;
+  price!: number;
+
+  @Input() beatslength!: number;
+  @Output() onAddBeat: EventEmitter<Beat> = new EventEmitter<Beat>();
 
   constructor(private uiService: UiService) {
     this.subscription = this.uiService.onToggle().subscribe((value) => {
@@ -25,14 +33,6 @@ export class AddBeatComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  showAddForm: boolean = false;
-  title!: string;
-  file!: string;
-  coverImage!: string;
-  price!: number;
-
-  @Output() onAddBeat: EventEmitter<Beat> = new EventEmitter<Beat>();
-
   onSubmit() {
     if (!this.title) {
       alert('Please add a beat');
@@ -40,10 +40,10 @@ export class AddBeatComponent implements OnInit {
     }
 
     const newBeat: Beat = {
-      id: 100, // Set the ID accordingly
+      id: this.beatslength + 1, // Set the ID accordingly
       title: this.title,
       file: this.file,
-      cover: this.coverImage,
+      cover: '/assets/trackCover.png',
       price: this.price,
     };
 

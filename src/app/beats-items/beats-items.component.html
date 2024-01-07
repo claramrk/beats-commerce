@@ -5,4 +5,5 @@
   <p>Listen to track: {{ beat.file }}</p>
   <img [src]="beat.cover" alt="trackCover" height="100" />
   <p>{{ beat.price }} €</p>
+  <button (click)="onDelete(beat)">delete</button>
 </div>
