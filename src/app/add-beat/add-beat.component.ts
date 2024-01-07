@@ -40,7 +40,7 @@ export class AddBeatComponent implements OnInit {
     }
 
     const newBeat: Beat = {
-      id: Math.floor(Math.random() * this.beatslength + 1),
+      id: Math.floor(Math.random() * (this.beatslength + 1)),
       title: this.title,
       file: this.file,
       cover: '/assets/trackCover.png',
